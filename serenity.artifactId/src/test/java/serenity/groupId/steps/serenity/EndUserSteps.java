@@ -1,8 +1,8 @@
 package serenity.groupId.steps.serenity;
 
-import serenity.groupId.pages.DictionaryPage;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
+import serenity.groupId.pages.DictionaryPage;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
@@ -37,4 +37,5 @@ public class EndUserSteps extends ScenarioSteps {
         enters(term);
         starts_search();
     }
+
 }
