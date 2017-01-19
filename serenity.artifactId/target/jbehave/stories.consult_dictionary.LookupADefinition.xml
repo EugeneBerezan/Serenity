@@ -1,0 +1,29 @@
+<story path="stories/consult_dictionary/LookupADefinition.story" title="Lookup a definition">
+<narrative keyword="Narrative:">
+  <inOrderTo keyword="In order to">talk better</inOrderTo>
+  <asA keyword="As a">n English student</asA>
+  <iWantTo keyword="I want to">look up word definitions</iWantTo>
+</narrative>
+<scenario keyword="Scenario:" title="Looking up the definition of &apos;&lt;fruit&gt;&apos;">
+<examples keyword="Examples:">
+<step>Given the user is on the Wikionary home page</step>
+<step>When the user looks up the definition of the word &apos;&lt;fruit&gt;&apos;</step>
+<step>Then they should see the definition &apos;&lt;definition&gt;&apos;</step>
+<parameters>
+<names><name>fruit</name><name>definition</name></names>
+<values><value>apple</value><value>A common, round fruit produced by the tree Malus domestica, cultivated in temperate climates.</value></values>
+<values><value>pear</value><value>An edible fruit produced by the pear tree, similar to an apple but elongated towards the stem.</value></values>
+</parameters>
+
+<example keyword="Example:">{fruit=apple, definition=A common, round fruit produced by the tree Malus domestica, cultivated in temperate climates.}</example>
+<step outcome="successful">Given the user is on the Wikionary home page</step>
+<step outcome="successful">When the user looks up the definition of the word &apos;<parameter>apple</parameter>&apos;</step>
+<step outcome="successful">Then they should see the definition &apos;<parameter>A common, round fruit produced by the tree Malus domestica, cultivated in temperate climates.</parameter>&apos;</step>
+
+<example keyword="Example:">{fruit=pear, definition=An edible fruit produced by the pear tree, similar to an apple but elongated towards the stem.}</example>
+<step outcome="successful">Given the user is on the Wikionary home page</step>
+<step outcome="successful">When the user looks up the definition of the word &apos;<parameter>pear</parameter>&apos;</step>
+<step outcome="successful">Then they should see the definition &apos;<parameter>An edible fruit produced by the pear tree, similar to an apple but elongated towards the stem.</parameter>&apos;</step>
+</examples>
+</scenario>
+</story>
